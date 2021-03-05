@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="vi">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4 {font-family:'Courier New'}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">?óng m?c l?c</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Tìm hi?u v?<br>Steve Jobs</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#pics" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">M?t s? hình ?nh</a> 
+    <a href="#bib" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Ti?u s?</a> 
+    <a href="#achievement" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Thành t?u</a> 
+    <a href="#quotes" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Danh ngôn</a> 
+    <a href="#extra" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Ngoài l?</a> 
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">?</a>
+  <span>M?c l?c</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="pics">
+    <h1 class="w3-jumbo"><b>Steve Jobs - T??ng ?ài c?a s? sáng t?o</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>M?t s? hình ?nh</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+  
+  <!-- Mot so hinh anh -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="https://thumbor.forbes.com/thumbor/620x434/https://blogs-images.forbes.com/connieguglielmo/files/2012/11/Steve-Jobs-dates.jpg?" width=490 height=300 onclick="onClick(this)" alt="Chân dung Steve Jobs">
+      <img src="https://thenewzpoint.com/wp-content/uploads/2020/03/steve-jobs-young.jpg" width=490 height=300 onclick="onClick(this)" alt="Steve Jobs khi còn tr?">
+      <img src="https://i.insider.com/52e5114eecad04ff494d152f?width=750&format=jpeg&auto=webp" width=490 height=300 onclick="onClick(this)" alt="Steve Jobs cùng v?i máy tính Macintosh ??u tiên (1984)">
+    </div>
+
+    <div class="w3-half">
+      <img src="https://images.successstory.com/img_people/family/620Xauto/Steve-with-His-Wife-at-House_1459484696.jpg" width=490 height=300 onclick="onClick(this)" alt="Gia ?ình c?a Steve Jobs">
+      <img src="https://img.apmcdn.org/83dc299aeeff063f04b3df91947814d5b086cb19/uncropped/ff6d92-20110824-steve-jobs.jpg" width=490 height=300 onclick="onClick(this)" alt="S? ki?n ra ??i iPhone - Cách m?ng c?a thi?t b? ?i?n tho?i">
+      <img src="https://www.goalcast.com/wp-content/uploads/2016/07/jobs-3.jpg" width=490 height=300 onclick="onClick(this)" alt="Câu danh ngôn n?i ti?ng c?a Steve Jobs">
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Tieu su -->
+  <div class="w3-container" id="bib" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Ti?u s?</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Steve Jobs (1955 - 2011), ông sinh t?i thành ph? San Francisco, bang California, Hoa K?.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Steve_Jobs_Headshot_2010-CROP2.jpg/1200px-Steve_Jobs_Headshot_2010-CROP2.jpg"
+    style="width:50%"
+    alt="Steve Jobs">
+   <h3><b>Steve Jobs ? WWDC (2010)</b></h3>
+    <p>Ông ???c ghi nh?n là m?t trong nh?ng ng??i tiên phong trong cu?c cách m?ng máy vi tính và ?i?n tho?i di ??ng thông minh. Ông còn là m?t nhà phát minh, nhà thi?t k? và doanh nhân ng??i M?, ng??i ??ng sáng l?p, Ch? t?ch và Giám ??c ?i?u hành c?a Apple Inc, v?i nh?ng ?óng góp không nh? vào s? thành công c?a Apple vào các s?n ph?m nh? iPhone, iPod, iPad, Macbook,...
+    </p>
+    <p>Jobs ???c sinh ra ? San Francisco, California b?i cha m? ru?t c?a anh là Joanne Schieble và John Jandali khi c? hai ch?a k?t hôn và v?n ?ang còn là sinh viên ??i h?c.</p>
+    <p>Ngay t? khi còn nh?, Jobs ?ã ???c cha anh khuy?n kích anh ti?p xúc v?i th? gi?i c? khí.</p>
+  <p>V? m?t h?c thu?t, sau khi t?t nghi?p tr??ng trung h?c vào n?m 1972, anh theo h?c t?i ??i h?c Reed ? Portland, Oregon. </p>
+  <p>Sau g?n m?t th?p k? chi?n ??u v?i b?nh ung th?. Steve Jobs qua ??i t?i Palo Alto vào ngày 5 tháng 10 n?m 2011, lúc ông 56 tu?i.</p>
+
+  <!-- Thanh tuu -->
+  <div class="w3-container" id="achievement" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Thành t?u</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Cu?c ??i c?a Steve Jobs là m?t hành trình dài g?n li?n v?i Apple, ông ?ã cho ra m?t nhi?u s?n ph?m công ngh? mang tính cách m?ng v?i th? gi?i.</p>
+            <img src="https://thumbnails-visually.netdna-ssl.com/steve-jobs--the-lost-legends-journey_5183c73a83f51.jpg" alt="iPod" style="width:100%">
+    <h3 style="text-align:center;"><b>M?t s? gi?i th??ng c?a Steve Jobs</b></h3>
+    <p>Trong cu?c ??i c?a mình, ông ?ã nh?n ???c m?t s? gi?i th??ng bao g?m Huân ch??ng Công ngh? Qu?c gia và Gi?i th??ng dành cho D?ch v? Công c?ng.</p>
+<p>
+Ông ???c gi?i thi?u vào ??i s?nh vinh danh California n?m 2007. Cùng n?m ?ó, ông ???c t?p chí Fortune vinh danh là ng??i quy?n l?c nh?t trong kinh doanh.</p>
+<p>
+N?m 2009, t?p chí Fortune ?ã g?i ông là CEO c?a th?p k?. N?m sau, ông x?p th? 17 trong danh sách Nh?ng ng??i quy?n l?c nh?t th? gi?i c?a Forbes.</p>
+<img src="https://i.pinimg.com/originals/c8/da/48/c8da489eca60ce8c1755d2cd4687ce40.jpg" 
+style="width:50%"
+alt="Steve Jobs trên bìa t?p chí Fortune">
+<h3><b> Steve Jobs trên bìa t?p chí Fortune</b></h3>
+
+<p>
+
+N?m 2010, ông ???c t?p chí Financial Times b?u ch?n là ng??i c?a n?m.</p>
+    <p><b>Sau ?ây là các c?t m?c quan tr?ng trong s? nghi?p ông</b>:</p>
+  </div>
+
+  <!-- Thanh tuu -->
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="https://www.thesun.co.uk/wp-content/uploads/2018/08/NINTCHDBPICT000424512502.jpg" alt="Sáng l?p Apple" width=310 height=180>
+        <div class="w3-container">
+          <h3 style="text-align:center;">Apple Inc</h3>
+          <p style="text-align:center;" class="w3-opacity"> Founder</p>
+          <p>Kh?i nghi?p v?i công ty máy tính Apple vào n?m 1976 cùng Wozniak.</p>
+          <p>N?m 1984, Jobs ?ã thi?t k? chi?c Macintosh ??u tiên.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="https://photos5.appleinsider.com/gallery/27511-41212-NeXTcube-l.jpg" alt="NeXT Inc" width=310 height=180>
+        <div class="w3-container">
+          <h3 style="text-align:center;">NeXT Inc</h3>
+          <p style="text-align:center;" class="w3-opacity">CEO & Founder</p>
+          <p>N?m 1985, ông ?ã t? ch?c t?i Apple và thành l?p công ty NeXT Inc. </p>
+          <p>Công ty n?i ti?ng v? thi?t k? ph?n m?m h??ng ??i t??ng. </p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/IPod_family.png" alt="iPod" width=310 height=180>
+        <div class="w3-container">
+          <h3 style="text-align:center;">iPod</h3>
+          <p style="text-align:center;" class="w3-opacity">B??c ngo?t</p>
+          <p>N?m 2001, Steve Jobs ?ã cho ra m?t iPod - máy nghe nh?c c?m tay.</p>
+          <p>iPod thành công vang d?i và doanh s? Apple nh?y v?t.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Danh ngon -->
+  <div class="w3-container" id="quotes" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Danh ngôn</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <h3><b>"?ôi khi cu?c ??i s? ném g?ch vào ??u b?n. ??ng ?ánh m?t ni?m tin".
+</b></h3>
+<h3><b>"Tôi mu?n t?o nên m?t âm thanh trong v? tr? này".
+</b></h3>
+<img src="https://fossbytes.com/wp-content/uploads/2017/02/steve.png"
+style="width:100%"
+alt="Steve Jobs' quote">
+<h3 style="text-align:center;"><b>Bài h?c t? Steve Jobs</b></h3>
+  </div>
+  
+  <!-- ngoai le -->
+  <div class="w3-container" id="extra" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Ngoài l?</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <h3><b>Tài s?n</b></h3>
+    <p>N?m 2011, Forbes ??c tính ph?n l?n tài s?n ròng c?a Steve Jobs vào kho?ng 6,5 t? ?ô la ??n 7 t? ?ô la M? t? vi?c ông bán Pixar cho Công ty Walt Disney vào n?m 2006.</p>
+    <p>Tuy nhiên, n?u Jobs không bán c? ph?n c?a mình t?i Apple vào n?m 1985, khi ông r?i công ty do chính ông ?ã thành l?p và phát tri?n trong h?n m?t th?p k?, giá tr? tài s?n ròng c?a ông s? là 36 t? ?ô la M?.</p>
+<h3><b>Phát minh</b></h3>
+<p>Jobs là ch? s? h?u ho?c ??ng s? h?u c?a h?n 230 b?ng sáng ch? ???c trao gi?i ho?c các ?ng d?ng ???c c?p b?ng sáng ch? trong l?nh v?c r?ng l?n c?a công ngh?.</p>
+<img src="https://www.incimages.com/uploaded_files/image/1920x1080/getty_96211011_2000134813806405780_414357.jpg"
+style="width:100%"
+alt="Steve Jobs">
+<h3 style="text-align:center;"><b>Steve Jobs</b></h3>
+  </div>
+  
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Made by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">CSE - My love</a></p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
